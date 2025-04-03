@@ -9,7 +9,7 @@
 
         if (coffeeFacts.length === 0) {
             factContainer.textContent = "No coffee facts available.";
-            return
+            return;
         }
         let currentIndex = 0;
         setInterval(() => {
