@@ -1,5 +1,8 @@
 "use strict";
 
+require("dotenv").config();
+console.log("Mongo URI:", uri);
+
 const express = require("express");
 const cors = require("cors");
 const { MongoClient, ServerApiVersion } = require("mongodb");
@@ -14,7 +17,6 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
-require("dotenv").config();
 const uri = process.env.MONGO_URI;
 
 const client = new MongoClient(uri, {
